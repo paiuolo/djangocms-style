@@ -45,7 +45,9 @@ else:
     TAG_CHOICES = tuple((entry, entry) for entry in TAG_CHOICES)
 
 CLASS_NAME_FORMAT = re.compile(r'^\w[\w_-]*$')
-TAG_TYPE_FORMAT = re.compile(r'\w[\w\d]*$')
+# patch
+# TAG_TYPE_FORMAT = re.compile(r'\w[\w\d]*$')
+TAG_TYPE_FORMAT = re.compile(r'\w[\w\d-]*$')
 
 # Add additional choices through the ``settings.py``.
 def get_templates():
